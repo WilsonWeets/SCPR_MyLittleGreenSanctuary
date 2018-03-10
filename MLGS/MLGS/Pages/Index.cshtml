@@ -1,0 +1,39 @@
+﻿@page
+@model MLGS.Pages.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<div>
+    <h4>ParcelData</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ParcelData.Temperature_sensor_value)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ParcelData.Temperature_sensor_value)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ParcelData.Pressure_sensor_value)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ParcelData.Pressure_sensor_value)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ParcelData.Humidity_value)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ParcelData.Humidity_value)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ParcelData.Light_sensor_value)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ParcelData.Light_sensor_value)
+        </dd>
+    </dl>
+</div>
