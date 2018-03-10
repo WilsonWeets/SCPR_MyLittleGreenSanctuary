@@ -18,22 +18,11 @@ namespace MLGS.Pages
             _context = context;
         }
 
-        public ParcelData ParcelData { get; set; }
+        public IList<ParcelData> ParcelData { get;set; }
 
-        public async Task<IActionResult> OnGetAsync(int? id)
+        public async Task OnGetAsync()
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            ParcelData = await _context.ParcelsData.SingleOrDefaultAsync(m => m.ParcelDataId == id);
-
-            if (ParcelData == null)
-            {
-                return NotFound();
-            }
-            return Page();
+            ParcelData = await _context.ParcelsData.ToListAsync();
         }
     }
 }

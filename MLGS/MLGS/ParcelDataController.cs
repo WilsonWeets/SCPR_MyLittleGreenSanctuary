@@ -20,15 +20,10 @@ namespace MLGS
 
         // POST api/<controller>
         [HttpPost]
-        public IActionResult Create([FromBody]ParcelData data)
+        public void Create([FromBody]ParcelData data)
         {
-            if(data == null)
-                return BadRequest();
-
             db.ParcelsData.Add(data);
             db.SaveChanges();
-
-            return RedirectToAction("OnGetAsync", "Index");
         }
     }
 }

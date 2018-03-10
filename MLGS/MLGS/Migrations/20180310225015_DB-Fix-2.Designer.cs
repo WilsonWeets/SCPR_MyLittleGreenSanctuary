@@ -11,9 +11,10 @@ using System;
 namespace MLGS.Migrations
 {
     [DbContext(typeof(ParcelContext))]
-    partial class ParcelContextModelSnapshot : ModelSnapshot
+    [Migration("20180310225015_DB-Fix-2")]
+    partial class DBFix2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
